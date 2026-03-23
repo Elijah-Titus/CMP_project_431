@@ -13,14 +13,21 @@
         </h1>
 
         <nav class="nav">
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="lunch.html">Lunch</a></li>
                 <li><a href="dinner.html">Dinner</a></li>
-                <li><a href="">Snack</a></li>
+                <li><a href="snack.html">Snack</a></li>
                 <li><a href="">Contact Us</a></li>
                 <li><a href="">About</a></li>
             </ul>
+            
+            <!-- Hamburger menu button for mobile -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
 
     </section>
@@ -39,52 +46,85 @@
     <h2>Popular Breakfast Foods</h2>
     <div class="food-container">
         
-        <div class="food-box">
-            <div class="food-image"><img src="../images/noodles.jpg" alt="Noodles"></div>
-            <h3>Noodles</h3>
-            <p>A quick and flavorful noodle dish tossed with fresh ingredients and savory sauce perfect for your Breakfast</p>
-            <span class="food-tag">Carbohydrates</span>
-        </div>
+        <a href="food.html?food=noodles" class="food-box-link">
+            <div class="food-box">
+                <div class="food-image"><img src="../images/noodles.jpg" alt="Noodles"></div>
+                <h3>Noodles</h3>
+                <p>A quick and flavorful noodle dish tossed with fresh ingredients and savory sauce perfect for your Breakfast</p>
+                <span class="food-tag">Carbohydrates</span>
+            </div>
+        </a>
 
-        <div class="food-box">
-            <div class="food-image"><img src="../images/plantainegg.jpg" alt="Fried Plantain and Eggs"></div>
-            <h3>Fried Plantain and Eggs</h3>
-            <p>A classic and satisfying combination of sweet fried plantains and perfectly cooked eggs quick, tasty, and filling.</p>
-            <span class="food-tag">Carbohydrates / Protein</span>
-        </div>
+        <a href="food.html?food=plantain" class="food-box-link">
+            <div class="food-box">
+                <div class="food-image"><img src="../images/plantainegg.jpg" alt="Fried Plantain and Eggs"></div>
+                <h3>Fried Plantain and Eggs</h3>
+                <p>A classic and satisfying combination of sweet fried plantains and perfectly cooked eggs quick, tasty, and filling.</p>
+                <span class="food-tag">Carbohydrates / Protein</span>
+            </div>
+        </a>
 
-        <div class="food-box">
-            <div class="food-image"><img src="../images/Toast.jpg" alt="Toast"></div>
-            <h3>Toasted Bread</h3>
-            <p>Perfectly toasted bread with a crunchy exterior and soft center, ideal for pairing with spreads or savory toppings.</p>
-            <span class="food-tag">Carbohydrates</span>
-        </div>
+        <a href="food.html?food=toasted" class="food-box-link">
+            <div class="food-box">
+                <div class="food-image"><img src="../images/Toast.jpg" alt="Toast"></div>
+                <h3>Toasted Bread</h3>
+                <p>Perfectly toasted bread with a crunchy exterior and soft center, ideal for pairing with spreads or savory toppings.</p>
+                <span class="food-tag">Carbohydrates</span>
+            </div>
+        </a>
 
-        <div class="food-box">
-            <div class="food-image"><img src="../images/moimoi.jpg" alt="Moi Moi"></div>
-            <h3>Moi Moi</h3>
-            <p>Deliciously smooth moi moi made from seasoned beans, perfectly steamed to create a rich, savory, and satisfying dish.</p>
-            <span class="food-tag">Protein</span>
-        </div>
+        <a href="food.html?food=moimoi" class="food-box-link">
+            <div class="food-box">
+                <div class="food-image"><img src="../images/moimoi.jpg" alt="Moi Moi"></div>
+                <h3>Moi Moi</h3>
+                <p>Deliciously smooth moi moi made from seasoned beans, perfectly steamed to create a rich, savory, and satisfying dish.</p>
+                <span class="food-tag">Protein</span>
+            </div>
+        </a>
 
-        <div class="food-box">
-            <div class="food-image"><img src="../images/egg-sauce.jpg" alt="Egg Sauce with Bread"></div>
-            <h3>Egg Sauce with Bread</h3>
-            <p>Rich and flavorful egg sauce paired with golden bread perfectly balanced for a hearty and delicious breakfast.</p>
-            <span class="food-tag">Protein</span>
-        </div>
+        <a href="food.html?food=eggsauce" class="food-box-link">
+            <div class="food-box">
+                <div class="food-image"><img src="../images/egg-sauce.jpg" alt="Egg Sauce with Bread"></div>
+                <h3>Egg Sauce with Bread</h3>
+                <p>Rich and flavorful egg sauce paired with golden bread perfectly balanced for a hearty and delicious breakfast.</p>
+                <span class="food-tag">Protein</span>
+            </div>
+        </a>
 
-        <div class="food-box">
-            <div class="food-image"><img src="../images/yam.jpg" alt="Yam and Egg sauce"></div>
-            <h3>Yam and Egg sauce</h3>
-            <p>Tender boiled yam served with a rich and savory egg sauce, making a hearty and satisfying breakfast or brunch.</p>
-            <span class="food-tag">Carbohydrates</span>
-        </div>
+        <a href="food.html?food=yam" class="food-box-link">
+            <div class="food-box">
+                <div class="food-image"><img src="../images/yam.jpg" alt="Yam and Egg sauce"></div>
+                <h3>Yam and Egg sauce</h3>
+                <p>Tender boiled yam served with a rich and savory egg sauce, making a hearty and satisfying breakfast or brunch.</p>
+                <span class="food-tag">Carbohydrates</span>
+            </div>
+        </a>
 
     </div>
 </section>
 
-
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        // Hamburger menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

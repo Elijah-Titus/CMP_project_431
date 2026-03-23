@@ -1,0 +1,133 @@
+/* food.css - Shared styles for all food pages */
+/* This single CSS file replaces all the individual food CSS files */
+
+body {
+    background-color: pink; /* You can change this to match your theme */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+/* Video section styles */
+.video-section {
+    margin: 20px auto;
+    max-width: 560px;
+    border: 3px solid white;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Video wrapper for responsive iframe */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 3px solid white;
+    margin-bottom: 20px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Steps section styles */
+.steps-section {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.steps-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.steps-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.steps-list li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #59b459; /* Green accent color */
+    display: flex;
+    align-items: center;
+}
+
+.steps-list li input[type="checkbox"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+}
+
+.steps-list li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Navigation styles (if you want to add navigation back to categories) */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #59b459;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    background-color: #4a994a;
+}
+
+/* Food box link styles - remove underlines and maintain appearance */
+.food-box-link {
+    text-decoration: none; /* Remove underlines */
+    color: inherit; /* Keep text color the same */
+    display: block; /* Make the entire box clickable */
+}
+
+.food-box-link:hover {
+    text-decoration: none; /* Ensure no underlines on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .video-section {
+        padding: 15px;
+    }
+
+    .steps-list li {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

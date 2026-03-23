@@ -24,6 +24,12 @@
 }
 
 
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .nav ul {
     list-style: none;
     display: flex;
@@ -46,11 +52,39 @@
     
 }
 
-nav a:hover {
+.nav a:hover {
     background-color: rgb(248, 183, 183);
     color: #ffffff;
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hidden by default, shown on mobile */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ff0000;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Hamburger animation */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
 
 /* Banner section */
 
@@ -62,24 +96,26 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh; /* Full viewport height on desktop too */
 }
 
 
 .banner video {
-    min-width: 100%;
-    min-height: 100vh;
-    display: block;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%; /* Fill the banner container */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .vid-container {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
     overflow: hidden;
-
 }
 
 .banner-overlay {
@@ -95,10 +131,14 @@ nav a:hover {
     position: absolute;
     z-index: 2;
     color: #ffffff;
-    top: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: larger;
-    
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
 }
 
 .text2 {
@@ -133,5 +173,107 @@ nav a:hover {
     padding: 10px;
     text-align: center;
 
+}
+
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 5%;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    /* Show hamburger menu on mobile */
+    .hamburger {
+        display: flex;
+        order: 2; /* Put hamburger on the right */
+    }
+
+    /* Hide navigation menu by default on mobile */
+    .nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Hide off-screen */
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(247, 177, 215);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: 0.3s;
+        z-index: 1000;
+        padding: 20px;
+        order: 1; /* Menu comes first in DOM but hamburger shows on right */
+    }
+
+    /* Show menu when active */
+    .nav ul.active {
+        left: 0;
+    }
+
+    .nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav a {
+        display: block;
+        width: 200px;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+
+    /* Mobile banner - hide video and use gradient background */
+    .vid-container {
+        display: none; /* Hide video on mobile */
+    }
+
+    .banner {
+        background: linear-gradient(135deg, #ff69b4 0%, #3bb859 100%); /* Pink to green gradient */
+        min-height: 100vh; /* Full viewport height on mobile */
+        position: relative;
+    }
+
+    .banner-overlay {
+        background: rgba(255, 255, 255, 0.1); /* Light overlay on gradient */
+    }
+
+    .banner-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 12px;
+        width: 95%;
+        text-align: center;
+    }
+
+    .text2 {
+        font-size: 36px;
+    }
+
+    .text3 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .text4 {
+        font-size: 14px;
+        max-width: 100%;
+        line-height: 1.4;
+        margin-top: 0.7rem;
+    }
+
+    .foot {
+        padding: 12px;
+    }
 }
 

@@ -16,21 +16,28 @@
         </h1>
 
         <nav class="nav">
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="Pages/breakfast.html">Breakfast</a></li>
                 <li><a href="Pages/lunch.html">Lunch</a></li>
-                <li><a href="">Dinner</a></li>
-                <li><a href="">Snack</a></li>
+                <li><a href="Pages/dinner.html">Dinner</a></li>
+                <li><a href="Pages/snack.html">Snack</a></li>
                 <li><a href="">Contact Us</a></li>
                 <li><a href="">About</a></li>
             </ul>
+            
+            <!-- Hamburger menu button for mobile -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
 
     </section>
 
     <section class="banner">
         <div class="vid-container">
-            <video src="images/33257-396487989.mp4" autoplay muted loop width="100%"></video>
+            <video src="images/33257-396487989.mp4" autoplay muted loop playsinline preload="auto"></video>
             <!--<img src="imges/lgo.png" alt="banner">-->
         </div>
 
@@ -72,5 +79,28 @@
 
         </div>
     </footer>
+
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        // Hamburger menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
 
 </html>

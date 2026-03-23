@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe - NutriGuide</title>
+    <!-- Link to the shared CSS file instead of individual food CSS files -->
+    <link rel="stylesheet" href="food.css">
+</head>
+<body>
+    <!-- Dynamic back link based on food category -->
+    <a id="back-link" href="breakfast.html" class="back-link">← Back to Breakfast</a>
+
+    <!-- This will be dynamically filled with the food name -->
+    <h1 id="food-title">Loading...</h1>
+
+    <section class="video-section">
+        <h2>Video Tutorial</h2>
+        <div class="video-wrapper">
+            <iframe id="food-video" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="steps-section">
+            <h3>Step-by-Step Guide</h3>
+            <ul id="steps-list" class="steps-list"></ul>
+        </div>
+    </section>
+
+    <!-- JavaScript to load the food data and update the page -->
+    <script src="foodData.js"></script>
+    <script>
+        // This script runs when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the food ID from the URL (e.g., ?food=noodles)
+            const urlParams = new URLSearchParams(window.location.search);
+            const foodId = urlParams.get('food');
+
+            // If no food ID is provided, show an error
+            if (!foodId) {
+                document.getElementById('food-title').textContent = 'No food selected';
+                return;
+            }
+
+            // Get the food data from our data file
+            const food = getFoodData(foodId);
+
+            // If the food doesn't exist, show an error
+            if (!food) {
+                document.getElementById('food-title').textContent = 'Food not found';
+                return;
+            }
+
+            // Update the page title in the browser tab
+            document.title = food.name + ' - NutriGuide';
+
+            // Determine which category this food belongs to and update back link
+            const backLink = document.getElementById('back-link');
+            const breakfastFoods = ['noodles', 'plantain', 'toasted', 'moimoi', 'eggsauce', 'yam'];
+            const lunchFoods = ['jollofrice', 'ebaokra', 'yamporridge', 'jollofspaghetti', 'catfishsoup', 'macaroni'];
+            const dinnerFoods = ['wheatbitter', 'spaghetticatfish', 'agidi', 'sweetpotatoes', 'vegetablepasta', 'beansstew'];
+            const snackFoods = ['puffpuff', 'chickenspringrolls', 'sausagerolls', 'chinchin', 'fishpie', 'plantainchips'];
+
+            if (breakfastFoods.includes(foodId)) {
+                backLink.href = 'breakfast.html';
+                backLink.textContent = '← Back to Breakfast';
+            } else if (lunchFoods.includes(foodId)) {
+                backLink.href = 'lunch.html';
+                backLink.textContent = '← Back to Lunch';
+            } else if (dinnerFoods.includes(foodId)) {
+                backLink.href = 'dinner.html';
+                backLink.textContent = '← Back to Dinner';
+            } else if (snackFoods.includes(foodId)) {
+                backLink.href = 'snack.html';
+                backLink.textContent = '← Back to Snacks';
+            }
+
+            // Update the food title on the page
+            document.getElementById('food-title').textContent = food.name;
+
+            // Set the video URL
+            document.getElementById('food-video').src = food.videoUrl;
+
+            // Clear any existing steps
+            const stepsList = document.getElementById('steps-list');
+            stepsList.innerHTML = '';
+            // Add each step to the list
+            food.steps.forEach(function(step, index) {
+                // Create a list item for each step
+                const listItem = document.createElement('li');
+
+                // Add a checkbox for each step
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.id = 'step-' + index;
+
+                // Add the step text
+                const stepText = document.createTextNode(step);
+
+                // Put the checkbox and text together
+                listItem.appendChild(checkbox);
+                listItem.appendChild(stepText);
+
+                // Add the step to the list
+                stepsList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>

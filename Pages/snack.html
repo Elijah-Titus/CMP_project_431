@@ -10,13 +10,20 @@
     <section class="head">
         <h1>Nutri<span style="color: rgb(59, 184, 59);">Guide</span></h1>
         <nav class="nav">
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="breakfast.html">Breakfast</a></li>
                 <li><a href="lunch.html">Lunch</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
+            
+            <!-- Hamburger menu button for mobile -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </section>
 
@@ -29,6 +36,7 @@
 
         <div class="food-container">
 
+            <a href="food.html?food=puffpuff" class="food-box-link">
             <div class="food-box">
 
                 <div class="food-image"><img src="../images/buff.jpg" alt="puff puffp"></div>
@@ -36,45 +44,80 @@
                 <p>Join thousands of people who have become better cooks by using my recipes-You can learn how to make unique and delicious recipes by following my simple steps.</p>
                 <span class="food-tag">carbohydrate</span>
             </div>
+            </a>
             
+            <a href="food.html?food=chickenspringrolls" class="food-box-link">
             <div class="food-box">
                 <div class="food-image"><img src="../images/rolls.jpg" alt="Chicken Springrolls"></div>
                 <h3>Chicken Springrolls</h3>
                 <p>Crispy and flavorful, these spring rolls are a delightful snack that's perfect for any occasion.</p>
                 <span class="food-tag">protein</span>
             </div>
+            </a>
 
+            <a href="food.html?food=sausagerolls" class="food-box-link">
             <div class="food-box">
                 <div class="food-image"><img src="../images/srolls.jpg" alt="Mini Sausage Rolls"></div>
                 <h3>Mini Sausage Rolls</h3>
                 <p>These mini sausage rolls are a tasty snack that's perfect for any occasion.</p>
                 <span class="food-tag">protein</span>
             </div>
+            </a>
 
 
+            <a href="food.html?food=chinchin" class="food-box-link">
             <div class="food-box">
                 <div class="food-image"><img src="../images/chin.jpg" alt="Chin Chin"></div>
                 <h3>Chin Chin</h3>
                 <p>These crispy and delicious chin chin are a great snack for any occasion.</p>
                 <span class="food-tag">carbohydrate</span>
             </div>
+            </a>
 
 
+            <a href="food.html?food=fishpie" class="food-box-link">
             <div class="food-box">
                 <div class="food-image"><img src="../images/pie.jpg" alt="Fish Pie "></div>
                 <h3>Fish Pie </h3>
                 <p>These delicious fish pies are a great snack for any occasion.</p>
                 <span class="food-tag">protein</span>
             </div>
+            </a>
 
             
+            <a href="food.html?food=plantainchips" class="food-box-link">
             <div class="food-box">
                 <div class="food-image"><img src="../images/chips.jpg" alt="Plantain Chips"></div>
                 <h3>Plantain Chips</h3>
                 <p>These crispy plantain chips are a great snack for any occasion.</p>
                 <span class="food-tag">carbohydrate</span>
             </div>
+            </a>
         </div>
     </section>
+
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        // Hamburger menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
