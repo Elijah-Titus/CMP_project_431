@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGuide</title>
+    <link rel="stylesheet" href="../Css/about.css">
+</head>
+<body>
+     <section class="head">
+        <h1>
+            Nutri<span style="color: rgb(59, 184, 59);">Guide</span> 
+        </h1>
+
+        <nav class="nav">
+            <ul id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="lunch.html">Lunch</a></li>
+                <li><a href="dinner.html">Dinner</a></li>
+                <li><a href="snack.html">Snack</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            
+            <!-- Hamburger menu button for mobile -->
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+    </section>
+
+
+   <!--  About section -->
+
+<section class="food-section">
+    <h2>About Us</h2>
+    <div class="food-container">
+        
+        
+            <div class="food-box">
+                <div class="food-image"><img src="../images/ELIJAH.jpeg" alt="ELIJAH OGAH TITUS"></div>
+                <h3>ELIJAH OGAH TITUS</h3>
+                <p>Software Engineer with a passion for creating innovative solutions and a love for healthy eating.</p>
+                <span class="food-tag">SENIOR MANAGER</span>
+            </div>
+        
+
+        
+            <div class="food-box">
+                <div class="food-image"><img src="../images/" alt=""></div>
+                <h3></h3>
+                <p></p>
+                <span class="food-tag"></span>
+            </div>
+        
+
+        
+            <div class="food-box">
+                <div class="food-image"><img src="../images/" alt=""></div>
+                <h3></h3>
+                <p></p>
+                <span class="food-tag"></span>
+            </div>
+        
+
+       
+            <div class="food-box">
+                <div class="food-image"><img src="../images/" alt=""></div>
+                <h3></h3>
+                <p></p>
+                <span class="food-tag"></span>
+            </div>
+     
+
+        
+            <div class="food-box">
+                <div class="food-image"><img src="../images/" alt=""></div>
+                <h3></h3>
+                <p></p>
+                <span class="food-tag"></span>
+            </div>
+  
+
+       
+            <div class="food-box">
+                <div class="food-image"><img src="../images/" alt=""></div>
+                <h3></h3>
+                <p></p>
+                <span class="food-tag"></span>
+            </div>
+       
+
+    </div>
+</section>
+
+    <!-- Hamburger Menu JavaScript -->
+    <script>
+        // Hamburger menu toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a link
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

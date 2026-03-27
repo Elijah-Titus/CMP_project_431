@@ -16,6 +16,7 @@
 
 }
 
+
 .head h1 {
     margin: 0;
     color: #ffffff;
@@ -91,111 +92,79 @@ nav a:hover {
     color: #ffffff;
 }
 
-.hero {
-    height: 70vh;
-    margin: 0;
-    padding: 0;
-}
 
-.breakhero {
-     height: 100%;
-     object-fit: cover;
-     padding: 0;
-  
-}
-
-/* Food Section Styles */
-
-.food-section {
-    padding: 0 5% 50px 5%;
+  /* form Section*/
+/* Container styling to center the form */
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
     background-color: pink;
-    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.food-section h2 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #666060;
-    padding: 30px 0 50px 0;
-    margin-bottom: 30px;
-    margin-top: 0;
-    font-family: 'Times New Roman', Times, serif;
-    letter-spacing: 2px;
-    font-weight: bolder;
+/* Individual field spacing */
+.form-container div {
+    margin-bottom: 20px;
 }
 
-.food-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.food-box {
-    background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    padding: 0;
-}
-
-.food-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.food-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    background-color: #e0e0e0;
-}
-
-.food-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.food-box h3 {
-    font-size: 1.5em;
-    color: #333;
-    padding: 15px 15px 5px 15px;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-}
-
-.food-box p {
-    color: #000000;
-    padding: 10px 15px;
-    font-size: 0.95em;
-    line-height: 1.5;
-    margin: 0;
-}
-
-.food-tag {
-    display: inline-block;
-    background-color: rgb(59, 184, 59);
-    color: #ffffff;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.85em;
-    margin: 10px 15px 15px 15px;
-    font-weight: bold;
-}
-
-.food-box-link {
-    text-decoration: none;
-    color: inherit;
+/* Label styling */
+label {
     display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #000000;
+    font-size: 0.9rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
 }
 
-.food-box-link:hover .food-box {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+/* Input and Textarea styling */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #fa2626;
+    border-radius: 6px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Interaction states */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: rgb(218, 120, 54);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical; /* Allows user to resize height only */
+}
+
+/* Button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(212, 73, 97);
+}
+
 
 @media (max-width: 768px) {
     .head {

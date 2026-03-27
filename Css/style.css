@@ -68,9 +68,10 @@
 .bar {
     width: 25px;
     height: 3px;
-    background-color: #ff0000;
+    background-color: #000000;
     transition: 0.3s;
     border-radius: 2px;
+    
 }
 
 /* Hamburger animation */
@@ -234,6 +235,10 @@
     /* Mobile banner - hide video and use gradient background */
     .vid-container {
         display: none; /* Hide video on mobile */
+    }
+
+    .head {
+        align-items: center;
     }
 
     .banner {

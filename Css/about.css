@@ -16,6 +16,7 @@
 
 }
 
+
 .head h1 {
     margin: 0;
     color: #ffffff;
@@ -141,10 +142,10 @@ nav a:hover {
     padding: 0;
 }
 
-.food-box:hover {
+/* .food-box:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .food-image {
     width: 100%;
@@ -192,10 +193,10 @@ nav a:hover {
     display: block;
 }
 
-.food-box-link:hover .food-box {
+/* .food-box-link:hover .food-box {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
+} */
 
 @media (max-width: 768px) {
     .head {

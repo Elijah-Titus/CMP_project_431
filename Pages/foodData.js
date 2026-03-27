@@ -101,7 +101,7 @@ const foodData = [
         name: 'Jollof Rice',
         description: 'Fragrant long-grain rice bathed in a savory blend of onions, scotch bonnets, and aromatic spices for a deep, soul-warming heat.',
         image: '../images/ricee.jpg',
-        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video ID
+        videoUrl: 'https://www.youtube.com/embed//EfZEArZcfAY?si=xD2mdSruoNw4H1Ii', // Placeholder - replace with actual video ID
         steps: [
             'Blend tomatoes, peppers, and onions.',
             'Heat oil and fry blended mixture.',
@@ -109,6 +109,7 @@ const foodData = [
             'Add washed rice and stir well.',
             'Cover and cook on low heat until rice is tender.',
             'Fluff rice and serve hot.'
+            
         ]
     },
     {
