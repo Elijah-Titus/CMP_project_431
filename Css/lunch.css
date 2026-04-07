@@ -39,7 +39,7 @@
 
 /* Hamburger Menu Styles */
 .hamburger {
-    display: none; /* Hidden by default, shown on mobile */
+    display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
@@ -189,13 +189,13 @@ nav a:hover {
 
 /* Food box link styles - remove underlines */
 .food-box-link {
-    text-decoration: none; /* Remove underlines */
-    color: inherit; /* Keep text color the same */
-    display: block; /* Make the entire box clickable */
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .food-box-link:hover {
-    text-decoration: none; /* Ensure no underlines on hover */
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -214,14 +214,14 @@ nav a:hover {
     /* Show hamburger menu on mobile */
     .hamburger {
         display: flex;
-        order: 2; /* Put hamburger on the right */
+        order: 2;
     }
 
     /* Hide navigation menu by default on mobile */
     .nav ul {
         position: fixed;
         top: 0;
-        left: -100%; /* Hide off-screen */
+        left: -100%;
         width: 100%;
         height: 100vh;
         background-color: rgb(247, 177, 215);
@@ -232,7 +232,7 @@ nav a:hover {
         transition: 0.3s;
         z-index: 1000;
         padding: 20px;
-        order: 1; /* Menu comes first in DOM but hamburger shows on right */
+        order: 1; 
     }
 
     /* Show menu when active */

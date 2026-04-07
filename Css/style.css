@@ -59,7 +59,7 @@
 
 /* Hamburger Menu Styles */
 .hamburger {
-    display: none; /* Hidden by default, shown on mobile */
+    display: none; 
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
@@ -97,13 +97,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Full viewport height on desktop too */
+    min-height: 100vh;  
 }
 
 
 .banner video {
     width: 100%;
-    height: 100%; /* Fill the banner container */
+    height: 100%;  
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -192,14 +192,14 @@
     /* Show hamburger menu on mobile */
     .hamburger {
         display: flex;
-        order: 2; /* Put hamburger on the right */
+        order: 2;  
     }
 
     /* Hide navigation menu by default on mobile */
     .nav ul {
         position: fixed;
         top: 0;
-        left: -100%; /* Hide off-screen */
+        left: -100%;  
         width: 100%;
         height: 100vh;
         background-color: rgb(247, 177, 215);
@@ -210,7 +210,7 @@
         transition: 0.3s;
         z-index: 1000;
         padding: 20px;
-        order: 1; /* Menu comes first in DOM but hamburger shows on right */
+        order: 1; 
     }
 
     /* Show menu when active */
@@ -232,23 +232,22 @@
         font-size: 18px;
     }
 
-    /* Mobile banner - hide video and use gradient background */
+  
     .vid-container {
-        display: none; /* Hide video on mobile */
-    }
+        display: none;  
 
     .head {
         align-items: center;
     }
 
     .banner {
-        background: linear-gradient(135deg, #ff69b4 0%, #3bb859 100%); /* Pink to green gradient */
-        min-height: 100vh; /* Full viewport height on mobile */
+        background: linear-gradient(135deg, #ff69b4 0%, #3bb859 100%); 
+        min-height: 100vh;  
         position: relative;
     }
 
     .banner-overlay {
-        background: rgba(255, 255, 255, 0.1); /* Light overlay on gradient */
+        background: rgba(255, 255, 255, 0.1);  
     }
 
     .banner-content {
@@ -281,4 +280,4 @@
         padding: 12px;
     }
 }
-
+}
