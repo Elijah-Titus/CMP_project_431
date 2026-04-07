@@ -194,7 +194,7 @@ const foodData = [
         name: 'Wheat and Bitter Leaf Soup',
         description: 'A hearty and nutritious soup made with wheat and bitter leaf, perfect for a satisfying dinner.',
         image: '../images/bitter leaf.jpg',
-        videoUrl: 'https://www.youtube.com/embed/evL4YHCsdho?si=mVHAedg-ip3CdFUP', // Placeholder - replace with actual video ID
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video ID
         steps: [
             'Cook wheat until soft.',
             'Wash and chop bitter leaf.',
@@ -209,7 +209,7 @@ const foodData = [
         name: 'Spaghetti & Catfish',
         description: 'Hey ya\'ll let\'s make fried catfish and spaghetti and meatballs! This is a classic fish Friday in the South, but we also do it with hushpuppies and friesDelicious dinner option description here.',
         image: '../images/spagfish.jpg',
-        videoUrl: 'https://www.youtube.com/embed/GVAxVxgcZ8o?si=EByP_Ody51d4PNqq', // Placeholder - replace with actual video ID
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video ID
         steps: [
             'Cook spaghetti according to instructions.',
             'Fry catfish fillets until crispy.',
@@ -224,7 +224,7 @@ const foodData = [
         name: 'Agidi and Stew',
         description: 'Delicious dinner option description here How to make Agidi and Ofe Akwu.',
         image: '../images/agidi.jpg',
-        videoUrl: 'https://www.youtube.com/embed//ifHBweXppng?si=WhfEjRZQFpjezhRL', // Placeholder - replace with actual video ID
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video ID
         steps: [
             'Prepare cornmeal dough for agidi.',
             'Steam dough until firm.',
@@ -239,7 +239,7 @@ const foodData = [
         name: 'Boiled Sweet Potatoes and Scrambled Eggs',
         description: 'Delicious dinner option description here.',
         image: '../images/fruit.jpg',
-        videoUrl: 'https://www.youtube.com/embed/AskmadopWXs?si=tJJ23ihzwvtoRyl5', // Placeholder - replace with actual video ID
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video ID
         steps: [
             'Boil sweet potatoes until tender.',
             'Scramble eggs in a pan.',
@@ -254,7 +254,7 @@ const foodData = [
         name: 'Vegetable Pasta Medley',
         description: 'Delicious dinner option description here Choosing grains is not just good for your health, it can also be delicious.',
         image: '../images/melly.webp',
-        videoUrl: 'https://www.youtube.com/embed/7q5C9iu4ukY?si=9agfMpTNH9jLUH6c', // Placeholder - replace with actual video ID
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video ID
         steps: [
             'Cook pasta according to package.',
             'Sauté mixed vegetables in oil.',
@@ -269,7 +269,7 @@ const foodData = [
         name: 'Beans Stew and fried plantains',
         description: 'High in fiber and protein, this hearty stew pairs perfectly with crispy fried plantains for a satisfying dinner.',
         image: '../images/beans.jpg',
-        videoUrl: 'https://www.youtube.com/embed/gG2biqawoEM?si=wu9eqebKRWQZOd3n', // Placeholder - replace with actual video ID
+        videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Placeholder - replace with actual video ID
         steps: [
             'Cook beans until soft.',
             'Prepare stew base with tomatoes and spices.',
