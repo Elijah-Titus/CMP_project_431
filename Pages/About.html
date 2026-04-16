@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NutriGuide</title>
+    <title>About - NutriGuide</title>
     <link rel="stylesheet" href="../Css/about.css">
 </head>
 <body>
-     <section class="head">
+
+    <!-- Header -->
+    <section class="head">
         <h1>
             Nutri<span style="color: rgb(59, 184, 59);">Guide</span> 
         </h1>
@@ -19,85 +21,63 @@
                 <li><a href="dinner.html">Dinner</a></li>
                 <li><a href="snack.html">Snack</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
             </ul>
-            
-            <!-- Hamburger menu button for mobile -->
+
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
         </nav>
-
     </section>
 
+    <!-- About Intro -->
+    <section class="about-intro">
+        <h2>About NutriGuide</h2>
+        <p>
+            NutriGuide is a platform designed to help individuals make better food choices
+            by providing simple, healthy, and delicious meal ideas. From breakfast to dinner,
+            we guide you toward a healthier lifestyle.
+        </p>
+    </section>
 
-   <!--  About section -->
+    <!-- Mission -->
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to promote cooking habits by making nutritious meals
+            easy to understand, accessible, and enjoyable for everyone.
+        </p>
+    </section>
 
-<section class="food-section">
-    <h2>About Us</h2>
-    <div class="food-container">
-        
-        
-            <div class="food-box">
-                <div class="food-image"><img src="../images/ELIJAH.jpeg" alt="ELIJAH OGAH TITUS"></div>
-                <h3>ELIJAH OGAH TITUS</h3>
-                <p>Software Engineer with a passion for creating innovative solutions and a love for healthy eating.</p>
-                <span class="food-tag">SENIOR MANAGER</span>
+    <!-- Team Section -->
+    <section class="team">
+        <h2>Meet the Team</h2>
+
+        <div class="team-container">
+
+            <div class="team-box">
+                <img src="../images/ELIJAH.jpeg" alt="Elijah Ogah Titus">
+                <h3>Elijah Ogah Titus</h3>
+                <p>Software Engineer passionate about building innovative solutions and promoting healthy living.</p>
+                <span>Senior Manager</span>
             </div>
-        
 
-        
-            <div class="food-box">
-                <div class="food-image"><img src="../images/" alt=""></div>
-                <h3></h3>
-                <p></p>
-                <span class="food-tag"></span>
+            <!-- this is to add more team members -->
+
+            <div class="team-box">
+                <img src="../images/default.png" alt="Team Member">
+                <h3>Your Teammate Name</h3>
+                <p>Role description goes here.</p>
+                <span>Position</span>
             </div>
-        
 
-        
-            <div class="food-box">
-                <div class="food-image"><img src="../images/" alt=""></div>
-                <h3></h3>
-                <p></p>
-                <span class="food-tag"></span>
-            </div>
-        
+        </div>
+    </section>
 
-       
-            <div class="food-box">
-                <div class="food-image"><img src="../images/" alt=""></div>
-                <h3></h3>
-                <p></p>
-                <span class="food-tag"></span>
-            </div>
-     
-
-        
-            <div class="food-box">
-                <div class="food-image"><img src="../images/" alt=""></div>
-                <h3></h3>
-                <p></p>
-                <span class="food-tag"></span>
-            </div>
-  
-
-       
-            <div class="food-box">
-                <div class="food-image"><img src="../images/" alt=""></div>
-                <h3></h3>
-                <p></p>
-                <span class="food-tag"></span>
-            </div>
-       
-
-    </div>
-</section>
-
-    <!-- Hamburger Menu JavaScript -->
-    <script>
+    <!-- JavaScript -->
+   <script>
         // Hamburger menu toggle functionality
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.getElementById('hamburger');

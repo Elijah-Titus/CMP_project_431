@@ -95,6 +95,21 @@ const foodData = [
         ]
     },
 
+     {
+        id: 'meatballs',
+        name: 'Meatballs',
+        description: 'Deliciously juicy meatballs made from seasoned ground meat, perfect for a hearty and satisfying breakfast or brunch.',
+        image: '../images/meatballs.jpg',
+        videoUrl: 'https://www.youtube.com/embed/3jkGsZSW4yw?si=gFjAOVtCe2a7711q', // Placeholder - replace with actual video ID
+        steps: [
+            'Mix ground meat with spices and seasonings.',
+            'Form the mixture into round balls.',
+            'Heat oil in a pan and fry meatballs until golden brown.',
+            'Add your favorite sauce and simmer until cooked through.',
+            'Serve hot with rice or bread.'
+        ]
+    },
+
     // Lunch Foods
     {
         id: 'jollofrice',
